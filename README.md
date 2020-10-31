@@ -9,6 +9,8 @@ This scrapper is capable of performing the following tasks:
 * getting the recent section of each course I enrolled in.
 * getting the section's items as well as the deadline if there's an assignment.
 
+[![Demo](https://img.youtube.com/vi/oHU6YzUlsOQ/0.jpg)](https://www.youtube.com/watch?v=oHU6YzUlsOQ)
+
 #### Important Notes:
 *Since Moodle is implemented in many different ways by each party/organisation around the world, it's expected to have different web structures in their respective. Therefore, chances are you would encounter errors or this script might not work as expected. In that case, however, **you must modify this script in order to make it work on your target website** (again, make sure it's a Moodle-based LMS). If you opt to modify this script, I advise you start rewriting your own version after the first three functions as they're the most critical parts in this script.*
 
