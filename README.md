@@ -3,7 +3,7 @@ A Moodle-based LMS scrapper written in Python 3.
 
 ### Descriptions
 
-I started this project to scrap the information about the courses I enrolled in on the Moodle-based LMS owned by my local community. As a result, all the information is presented in a nicely formatted summary table. It might be a trivial thing, if you would say, but this does save me a whole lot of time rather than having do that manually on a browser.
+This is a web scrapper written in Python 3 made specifically for scrapping Moodle-based Learning Management System website. I created this program to collect the information about the courses I enrolled in on the Moodle-based LMS owned by my local community. All the information collected is then processed and presented in a nicely formatted table. It might be a trivial thing, if you would say, but this does save me a whole lot of time rather than having do that manually on a browser.
 
 This scrapper is capable of performing the following tasks:
 * getting the recent section of each course I enrolled in.
@@ -37,7 +37,7 @@ def main():
   password  = 'your_password'
 ```
 
-* **NOT RECOMMENDED** - You can just run the main file (moodle-lms-scrapper.py) directly, but you'll have to manually input the login page URL and your credentials each time you want to login. This is a tedious one, though. Hence, not a recomendation.
+* **NOT RECOMMENDED** - You can just run the main file (moodle-lms-scrapper.py) directly, but you'll have to manually input the login page URL and your credentials each time you want to login. This is a tedious one, though. Hence, not a recommendation.
 ```python
 python3 moodle-scrapper.py
 ```
