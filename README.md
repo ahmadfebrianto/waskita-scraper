@@ -1,11 +1,11 @@
-# moodle-scrapper
-A Moodle-based LMS scrapper written in Python 3.
+# moodle-scraper
+A Moodle-based LMS scraper written in Python 3.
 
 ### Descriptions
 
-This is a web scrapper written in Python 3 made specifically for scrapping Moodle-based Learning Management System website. I created this program to collect the information about the courses I enrolled in on the Moodle-based LMS owned by my local community. All the information collected is then processed and presented in a nicely formatted table. It might be a trivial thing, if you would say, but this does save me a whole lot of time rather than having do that manually on a browser.
+This is a web scraper written in Python 3 made specifically for scraping Moodle-based Learning Management System website. I created this program to collect the information about the courses I enrolled in on the Moodle-based LMS owned by my local community. All the information collected is then processed and presented in a nicely formatted table. It might be a trivial thing, if you would say, but this does save me a whole lot of time rather than having do that manually on a browser.
 
-This scrapper is capable of performing the following tasks:
+This scraper is capable of performing the following tasks:
 * getting the recent section of each course I enrolled in.
 * getting the section's items as well as the deadline if there's an assignment.
 
@@ -28,7 +28,7 @@ This scrapper is capable of performing the following tasks:
   ```
 
 ### Usage
-* **RECOMMENDED** - You must **edit the main file** *(moodle-scrapper.py)* and provide the login page URL and your credentials in the **main()** section.
+* **RECOMMENDED** - You must **edit the main file** *(moodle-scraper.py)* and provide the login page URL and your credentials in the **main()** section.
 ```python
 def main():
   ......
@@ -37,9 +37,9 @@ def main():
   password  = 'your_password'
 ```
 
-* **NOT RECOMMENDED** - You can just run the main file (moodle-lms-scrapper.py) directly, but you'll have to manually input the login page URL and your credentials each time you want to login. This is a tedious one, though. Hence, not a recommendation.
+* **NOT RECOMMENDED** - You can just run the main file (moodle-lms-scraper.py) directly, but you'll have to manually input the login page URL and your credentials each time you want to login. This is a tedious one, though. Hence, not a recommendation.
 ```python
-python3 moodle-scrapper.py
+python3 moodle-scraper.py
 ```
 
 ### Contact(s)
