@@ -60,12 +60,6 @@ class MyMoodle(Moodle):
             item_url).text, 'html.parser')
         return soup
 
-    def multithread(self, func, items):
-        '''Run repeated processes with multithreading capability.'''
-
-        with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-            return executor.map(func, items)
-
     def fetch_courses(self, course_urls):
         '''Extract information about each course (name, sections, section items)'''
 
@@ -166,7 +160,8 @@ class MyMoodle(Moodle):
         tables = self.multithread(unpack_course, course_objects)
         return tabulate(tables, headers=headers, tablefmt=table_format, colalign=('left', 'left', 'left', 'left'))
 
-    def print_error_message(self, messages=[]):
+    @staticmethod
+    def print_error_message(messages=[]):
         '''Print coustomized error messages.'''
 
         if isinstance(messages, str):
@@ -179,12 +174,21 @@ class MyMoodle(Moodle):
             print(f'\n\n[!] {messages[0]}')
         exit('\n[!] Program exited.\n')
 
+    @staticmethod
+    def multithread(func, items):
+        '''Run repeated processes with multithreading capability.'''
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+            return executor.map(func, items)
+
 
 def main():
 
     login_url = os.getenv("wskt_login")
     username = os.getenv("wskt_user")
     password = os.getenv("wskt_pass")
+
+    moodle = MyMoodle()
 
     try:
         print()
@@ -197,7 +201,6 @@ def main():
         while not password:
             password = getpass('[!] Password\t\t= ')
 
-        moodle = MyMoodle()
         moodle.login(login_url, username, password)
 
         soup = BeautifulSoup(moodle.response.text, 'html.parser')
